@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>יצירת משתמש חדש</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap">
+</head>
+<body>
+    <div class="container">
+        <h1>יצירת משתמש חדש</h1>
+        <form id="registerForm">
+            <label for="username">שם משתמש:</label>
+            <input type="text" id="username" required>
+            
+            <label for="password">סיסמה:</label>
+            <input type="password" id="password" required>
+
+            <label for="role">תפקיד:</label>
+            <select id="role" required>
+                <option value="student">תלמיד</option>
+                <option value="teacher">מורה</option>
+            </select>
+            
+            <button type="submit">צור משתמש</button>
+        </form>
+        <p id="message"></p>
+        <p><a href="/">חזור להתחברות</a></p>
+    </div>
+    <script src="/script-register.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+body {
+    font-family: 'Heebo', sans-serif;
+    color: #fff; /* צבע טקסט לבן על רקע כהה */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    direction: rtl;
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%); /* רקע גרדיאנט */
+    transition: background-image 0.5s ease;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.15); /* רקע שקוף למחצה */
+    backdrop-filter: blur(10px); /* אפקט טשטוש מאחור */
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* צל עדין */
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    transition: all 0.5s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* מסגרת עדינה */
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin: 15px 0 8px;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2); /* שקיפות עדינה */
+    border-radius: 12px;
+    box-sizing: border-box;
+    color: #fff;
+    transition: all 0.4s ease;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+button {
+    background-image: linear-gradient(to right, #f76b1c 0%, #f9a826 100%);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(247, 107, 28, 0.4);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(247, 107, 28, 0.6);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(247, 107, 28, 0.3);
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 15px;
+    margin-top: 30px;
+}
+
+th, td {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+th {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: 700;
+}
+
+p#message {
+    margin-top: 25px;
+    font-weight: 500;
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 25px;
+        border-radius: 20px;
+    }
+}

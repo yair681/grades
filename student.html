@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>צפייה בציונים - תלמידים</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap">
+    <script>
+        if (localStorage.getItem('userRole') !== 'student') {
+            window.location.href = '/';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>צפייה בציונים</h1>
+        <form id="viewForm">
+            <label for="student">שם התלמיד:</label>
+            <input type="text" id="student" value="" required>
+            <button type="submit">הצג ציונים</button>
+        </form>
+        <table id="gradesTable">
+            <thead>
+                <tr>
+                    <th>מקצוע</th>
+                    <th>ציון</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <p id="message"></p>
+        <button onclick="logout()">התנתק</button>
+    </div>
+    <script src="/script-student.js"></script>
+    <script>
+        document.getElementById('student').value = localStorage.getItem('username') || '';
+        document.getElementById('student').disabled = true;
+
+        function logout() {
+            localStorage.clear();
+            window.location.href = '/';
+        }
+    </script>
+</body>
+</html>
